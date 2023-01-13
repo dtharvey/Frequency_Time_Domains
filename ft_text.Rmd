@@ -1,0 +1,15 @@
+---
+output: html_document
+---
+Many analytical signals are in the form of a symmetrical peak characterized by its area, its position along the *x*-axis, and its maximum height. The peak in the upper part of the figure on the right---which is typical of an NMR spectrum---is described by a Lorentzian function with the form 
+$$y_i = A / \left[ {1 + (x_i - x_0)^2/s^2} \right ]$$ 
+where $y_i$ is the signal for a value of $x_i$, $x_0$ is the position of the peak's center, *A* is the peak's height at $x_0$, and *s* is a measure of the peak's width. The area under the peak is equivalent to $\pi A s$ and the peak width at half-height (also known as the full-width half-maximum, or fwhm) is equivalent to $2 s$. 
+
+We can express a Lorentzian peak shape as a function of time using a damped cosine function with the form 
+$$y_t = A \cos(\omega t) e^{-t/s}$$ 
+where *A* is the initial amplitude, $\omega$ is the cosine's frequency, and *s* is a decay constant. The process of converting between these two views of the signal---the frequency domain and the time domain---is called a Fourier transformation, the details of which are not considered here.
+
+
+Although their forms are different, the frequency domain and the time domain provide equivalent information. Use the sliders for Peak 1 to convince yourself that a peak's area in the frequency domain is equivalent to its initial amplitude in the time domain, that a peak's position in the frequency domain is related to its oscillation frequency in the time domain, and that a peak's width in the frequency domain is related to its decay rate in the time domain.
+
+When the frequency domain spectrum has two or more peaks, the corresponding time domain spectrum is more complex. Select the radio button to add a second peak to the frequency domain and explore how their relative positions, widths, and areas affect the time domain spectrum. Use the radio button to show the individual time domain spectra for the two peaks---which highlights the first 64 points---and convince yourself that a simple summation yields the time domain spectra.
